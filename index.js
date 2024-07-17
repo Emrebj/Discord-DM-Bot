@@ -83,3 +83,17 @@ client.on('message', message => {
   lastMessages.set(message.author.id, "trues");
   message.author.send('This Script Discord DM Bot By 30j \n Recived Your Message \n This bot is made to receive your message so that you can communicate with special admins'); 
 });
+
+// Sunucu oluşturma ve proje aktivitesi sağlama.
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// Web sunucu
+app.get('/', (req, res) => {
+  res.sendStatus(200);
+});
+
+app.listen(port, () => {
+  console.log(`Sunucu ${port} numaralı bağlantı noktasında yürütülüyor.`);
+});
